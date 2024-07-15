@@ -11,3 +11,8 @@ pip install -r requirements.txt
 5. python manage.py migrate
 # Запустить сервер разработки
 7. python manage.py runserver
+
+
+#### Используемые технологии
+- Python 3.9
+- Django 3.2.15
