@@ -29,7 +29,7 @@ def get_current_usd(request):
                 for entry in history
             ]
         }
-        logging.info(f'Курс USD обновлен: {current_rate}')
+        logging.info(f'Курс USD обновлен: {current_rate}.')
         return JsonResponse(response_data)
     except requests.exceptions.HTTPError as e:
         logging.error(e)
