@@ -14,5 +14,5 @@ pip install -r requirements.txt
 
 
 #### Используемые технологии
-- Python 3.9
-- Django 3.2.15
+- Python 3.12
+- Django 3.5
