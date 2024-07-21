@@ -41,9 +41,14 @@ https://www.exchangerate-api.com/
    python manage.py migrate
 ```
 
-# Запустить сервер разработки
-7. python manage.py runserver
-   Перейти по адресу http://127.0.0.1:8000/get_current_usd/
+## 7. Запустить сервер разработки
+```bash
+   python manage.py runserver
+```
+
+## 8. Перейти на са сайт 
+## http://127.0.0.1:8000/get_current_usd/
+
 
 
 #### Используемые технологии
