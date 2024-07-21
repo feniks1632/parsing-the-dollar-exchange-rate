@@ -13,16 +13,37 @@
 
 
 # Порядок запуска
-# 1. Получить ключ на сайте
+
+## 1  Склонировать репозиторий 
+```bash
+   git clone <название репозитория>
+   cd <ваш_репозиторий>
+```
+## 2. Получить ключ на сайте
 https://www.exchangerate-api.com/
-# 2. Ввести его в .env в параметр "API_KEY"
-# 3. Установить зависимости проекта
-pip install -r requirements.txt
-# Произвести миграции
-5. python manage.py migrate
+
+## 3. Ввести его в .env в параметр "API_KEY"
+
+## 4. Создайте и активируйте виртуальное окружение:
+```bash
+   python -m venv venv
+   source venv/bin/activate  # Для Linux/Mac
+   venv\Scripts\activate  # Для Window
+```
+
+## 5. Установите зависимости проекта
+```bash
+   pip install -r requirements.txt
+```
+## 6. Выполните миграции базы данных
+```bash
+   python manage.py makemigrations
+   python manage.py migrate
+```
+
 # Запустить сервер разработки
 7. 1. python manage.py runserver
-   2. Перейти на адрес http://127.0.0.1:8000/get_current_usd/
+   2. Перейти по адресу http://127.0.0.1:8000/get_current_usd/
 
 
 #### Используемые технологии
