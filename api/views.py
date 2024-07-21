@@ -1,9 +1,10 @@
 import logging
 import requests
 
+
 from django.http import JsonResponse
 
-from dollar_parse.settings import API_URL, API_KEY
+from dollar_parse.settings import API_URL, API_KEY, TRANSLATION_DICT
 from .models import UsdRate
 
 
@@ -25,6 +26,17 @@ def get_current_usd(request):
                 {
                     'timestamp': str(entry.timestamp),
                     'rate': entry.rate
+                }
+                for entry in history
+            ]
+        }
+        # Переводим данные в русский язык
+        response_data = {
+            TRANSLATION_DICT.get('current_rate', 'current_rate'): current_rate,
+            TRANSLATION_DICT.get('history', 'history'): [
+                {
+                    TRANSLATION_DICT.get('timestamp', 'timestamp'): str(entry.timestamp),
+                    TRANSLATION_DICT.get('rate', 'rate'): entry.rate
                 }
                 for entry in history
             ]

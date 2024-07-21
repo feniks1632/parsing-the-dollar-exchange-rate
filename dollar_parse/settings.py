@@ -11,6 +11,12 @@ logging.basicConfig(
     encoding='utf-8'
 )
 
+TRANSLATION_DICT = {
+    'current_rate': 'Текущий курс USD',
+    'history': 'История запросов курса USD',
+    'timestamp': 'Дата и время',
+    'rate': 'Курс'
+}
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
